@@ -4,14 +4,14 @@ import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center mx-auto p-4 px-12 lg:px-12 xl:px-36 justify-between bg-white lg:bg-transparent">
+    <div className="flex items-center mx-auto p-4 lg:px-12 xl:px-36 justify-between bg-white lg:bg-transparent">
       {/* logo */}
       <h3 className="text-black lg:text-white font-poppins uppercase font-bold text-2xl lg:text-[40px] lg:leading-[48px]">
         relap
       </h3>
 
       {/* nav items */}
-      <div className="items-center gap-12 text-white hidden lg:flex ">
+      <div className="items-center gap-12 text-white hidden lg:flex font-semibold ">
         <div
         // to="home" spy={true} smooth={true} offset={-50} duration={1000}
         >
