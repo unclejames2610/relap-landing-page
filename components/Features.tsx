@@ -5,10 +5,13 @@ import FeaturesImages from "./FeaturesImages";
 
 const Features = () => {
   return (
-    <div className="flex flex-col p-4 py-12 lg:pt-16 lg:p-12 xl:p-36 h-full w-full bg-customPink gap-10">
+    <div
+      className="flex flex-col p-4 py-12 lg:pt-16 lg:p-12 xl:p-36 h-full w-full bg-customPink gap-10"
+      id="features"
+    >
       {/* writing */}
       <div className="flex justify-between items-start lg:items-center flex-col lg:flex-row gap-6">
-        <div className="flex flex-col gap-4 items-start">
+        <div className="flex flex-col gap-4 items-start text-fontBlack">
           <h5 className="uppercase font-bold font-poppins">Nisi ut aliquid</h5>
           <h1 className="font-bold font-poppins lg:text-[56px] text-[40px] leading-[48px] lg:leading-[64px] w-[431px]">
             Ullam corporis suscipit
