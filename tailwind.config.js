@@ -14,6 +14,7 @@ module.exports = {
         secondary: "#C86DD7",
         primary: "#3023AE",
         fontBlack: "#333333",
+        customPink: "#FDF2FF",
       },
     },
   },
