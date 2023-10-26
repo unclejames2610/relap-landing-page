@@ -23,7 +23,7 @@ const Hero = () => {
             molestiae non recusandae.
           </p>
 
-          <button className="rounded-full bg-[#FFC300] p-2 px-16 font-bold text-white">
+          <button className="rounded-full bg-[#FFC300] p-2 px-16 font-bold text-white border border-[#FFC300] hover:bg-transparent hover:text-[#FFC300] transition-all duration-500">
             Explore
           </button>
         </div>

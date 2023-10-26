@@ -20,7 +20,7 @@ const News = () => {
           impedit quo minus id quod maxime placeat facere possimus, omnis
           voluptas assumenda est.
         </p>
-        <button className="bg-secondary rounded-full text-white py-2 px-16">
+        <button className="bg-secondary rounded-full text-white py-2 px-16 font-bold border border-secondary hover:bg-transparent hover:text-secondary duration-500 transition-all">
           Our blog
         </button>
       </div>

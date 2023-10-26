@@ -19,7 +19,7 @@ const Navbar: FC = () => {
           smooth={true}
           offset={0}
           duration={1000}
-          className="cursor-pointer"
+          className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
         >
           Home
         </Link>
@@ -29,7 +29,7 @@ const Navbar: FC = () => {
           smooth={true}
           offset={0}
           duration={1000}
-          className="cursor-pointer"
+          className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
         >
           Features
         </Link>
@@ -39,7 +39,7 @@ const Navbar: FC = () => {
           smooth={true}
           offset={0}
           duration={1000}
-          className="cursor-pointer"
+          className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
         >
           Works
         </Link>
@@ -49,7 +49,7 @@ const Navbar: FC = () => {
           smooth={true}
           offset={0}
           duration={1000}
-          className="cursor-pointer"
+          className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
         >
           About
         </Link>
@@ -59,7 +59,7 @@ const Navbar: FC = () => {
           smooth={true}
           offset={0}
           duration={1000}
-          className="cursor-pointer"
+          className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
         >
           People
         </Link>
@@ -69,22 +69,15 @@ const Navbar: FC = () => {
           smooth={true}
           offset={0}
           duration={1000}
-          className="cursor-pointer"
+          className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
         >
           News
         </Link>
       </div>
 
       {/* button */}
-      <Link
-        to="contact-us"
-        spy={true}
-        smooth={true}
-        offset={0}
-        duration={1000}
-        className="cursor-pointer"
-      >
-        <button className="border bg-transparent text-white p-2 px-10 border-white/30 rounded-full font-bold hidden lg:block">
+      <Link to="contact-us" spy={true} smooth={true} offset={0} duration={1000}>
+        <button className="border bg-transparent text-white p-2 px-10 border-white/30 rounded-full font-bold hidden lg:block hover:bg-white/30 hover:text-white transition-all duration-500">
           Contact Us
         </button>
       </Link>

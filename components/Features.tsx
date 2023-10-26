@@ -41,7 +41,7 @@ const Features = () => {
       <FeaturesImages />
 
       <div className="flex items-center justify-center">
-        <button className="bg-secondary rounded-full py-2 px-16 font-bold text-white">
+        <button className="bg-secondary border border-secondary rounded-full py-2 px-16 font-bold text-white hover:bg-transparent hover:text-secondary transition-all duration-500">
           All works
         </button>
       </div>

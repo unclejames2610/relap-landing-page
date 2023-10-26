@@ -62,7 +62,7 @@ const About = () => {
           impedit quo minus id quod maxime placeat facere possimus, omnis
           voluptas assumenda est.
         </p>
-        <button className="font-bold py-2 px-12 rounded-full bg-[#FFC300] text-white">
+        <button className="font-bold py-2 px-12 rounded-full bg-[#FFC300] text-white border border-[#FFC300] hover:bg-transparent hover:text-[#FFC300] transition-all duration-500">
           Our team
         </button>
       </div>

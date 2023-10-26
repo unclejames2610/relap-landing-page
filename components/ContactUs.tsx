@@ -19,10 +19,10 @@ const ContactUs = () => {
 
         <div className="flex items-center flex-col lg:flex-row gap-5 w-full justify-center">
           <input
-            className="border p-4 bg-white border-[#DADADA] lg:w-[60%] w-full"
+            className="border p-4 bg-white border-[#DADADA] lg:w-[60%] w-full focus:outline-none focus:border-secondary outline-none"
             placeholder="Your email"
           />
-          <button className="bg-secondary py-3 px-16 rounded-full text-white font-bold">
+          <button className="bg-secondary py-3 px-16 rounded-full text-white font-bold border border-secondary hover:bg-transparent hover:text-secondary duration-500 transition-all">
             Send
           </button>
         </div>

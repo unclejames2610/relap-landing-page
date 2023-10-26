@@ -12,7 +12,10 @@ const HomeComponent = () => {
   const [p2, setp2] = useState(false);
   const [p3, setp3] = useState(false);
   return (
-    <div className="bg-white p-4 py-12 lg:pt-16 lg:p-12 xl:p-36 flex flex-col lg:flex-row lg:items-center justify-between mx-auto gap-20 lg:gap-0 overflow-hidden">
+    <div
+      className="bg-white p-4 py-12 lg:pt-16 lg:p-12 xl:p-36 flex flex-col lg:flex-row lg:items-center justify-between mx-auto gap-20 lg:gap-0 overflow-hidden"
+      id="homepage"
+    >
       {/* writing */}
       <div className="flex flex-col items-start gap-5">
         <h5 className="uppercase font-bold font-poppins text-fontBlack">
