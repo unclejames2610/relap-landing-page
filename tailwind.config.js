@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        contact_bg: "url('../public/assets/bgContactUs.svg')",
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },

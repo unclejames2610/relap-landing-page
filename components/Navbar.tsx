@@ -1,8 +1,9 @@
-import React from "react";
+"use client";
+import React, { FC } from "react";
 import { Link } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar: FC = () => {
   return (
     <div className="flex items-center mx-auto p-4 lg:px-12 xl:px-36 justify-between bg-white lg:bg-transparent">
       {/* logo */}
@@ -12,54 +13,81 @@ const Navbar = () => {
 
       {/* nav items */}
       <div className="items-center gap-12 text-white hidden lg:flex font-semibold ">
-        <div
-        // to="home" spy={true} smooth={true} offset={-50} duration={1000}
+        <Link
+          to="homepage"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1000}
+          className="cursor-pointer"
         >
           Home
-        </div>
-        <div
-        //   to="features"
-        //   spy={true}
-        //   smooth={true}
-        //   offset={-50}
-        //   duration={1000}
+        </Link>
+        <Link
+          to="features"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1000}
+          className="cursor-pointer"
         >
           Features
-        </div>
-        <div
-        // to="works" spy={true} smooth={true} offset={-50} duration={1000}
+        </Link>
+        <Link
+          to="works"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1000}
+          className="cursor-pointer"
         >
           Works
-        </div>
-        <div
-        // to="about" spy={true} smooth={true} offset={-50} duration={1000}
+        </Link>
+        <Link
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1000}
+          className="cursor-pointer"
         >
           About
-        </div>
-        <div
-        // to="people" spy={true} smooth={true} offset={-50} duration={1000}
+        </Link>
+        <Link
+          to="people"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1000}
+          className="cursor-pointer"
         >
           People
-        </div>
-        <div
-        // to="news" spy={true} smooth={true} offset={-50} duration={1000}
+        </Link>
+        <Link
+          to="news"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1000}
+          className="cursor-pointer"
         >
           News
-        </div>
+        </Link>
       </div>
 
       {/* button */}
-      <div
-      // to="contact-us"
-      // spy={true}
-      // smooth={true}
-      // offset={-50}
-      // duration={1000}
+      <Link
+        to="contact-us"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={1000}
+        className="cursor-pointer"
       >
         <button className="border bg-transparent text-white p-2 px-10 border-white/30 rounded-full font-bold hidden lg:block">
           Contact Us
         </button>
-      </div>
+      </Link>
 
       <FaBars className="text-secondary text-xl cursor-pointer lg:hidden" />
     </div>
