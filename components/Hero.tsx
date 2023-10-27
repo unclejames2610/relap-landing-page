@@ -8,74 +8,124 @@ import igIcon from "@/public/assets/ig-icon.svg";
 import oval from "@/public/assets/Oval.svg";
 import Image from "next/image";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 
 const Hero: FC = () => {
   const [navOpen, setNavOpen] = useState<boolean>(false);
+
+  const menuVariant = {
+    hidden: {
+      x: 100,
+      y: -100,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      borderBottomLeftRadius: ["100%", "0%"],
+
+      transition: {
+        duration: 0.8,
+        when: "beforeChildren",
+      },
+    },
+  };
+
+  const listVariant = {
+    hidden: {
+      x: 100,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      staggerChildren: 0.2,
+    },
+  };
+
   return (
     <div className="bg-[linear-gradient(45deg,_#C86DD7_0%,_#3023AE_100%)] h-screen w-full mx-auto relative overflow-hidden">
       <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
       {navOpen && (
-        <div className="lg:hidden flex flex-col gap-6 font-semibold text-secondary items-center w-full absolute bg-white rounded-b-2xl p-4 top-16 z-[100]">
-          <Link
-            to="homepage"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={1000}
-            className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
-          >
-            Home
-          </Link>
-          <Link
-            to="features"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={1000}
-            className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
-          >
-            Features
-          </Link>
-          <Link
-            to="works"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={1000}
-            className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
-          >
-            Works
-          </Link>
-          <Link
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={1000}
-            className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
-          >
-            About
-          </Link>
-          <Link
-            to="people"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={1000}
-            className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
-          >
-            People
-          </Link>
-          <Link
-            to="news"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={1000}
-            className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
-          >
-            News
-          </Link>
+        <motion.div
+          className="lg:hidden flex flex-col gap-6 font-semibold text-secondary items-center w-full absolute bg-white p-4 top-16 z-[100]"
+          variants={menuVariant}
+          animate="visible"
+          initial="hidden"
+        >
+          <motion.div variants={listVariant}>
+            <Link
+              to="homepage"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={1000}
+              className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
+            >
+              Home
+            </Link>
+          </motion.div>
+          <motion.div variants={listVariant}>
+            <Link
+              to="features"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={1000}
+              className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
+            >
+              Features
+            </Link>
+          </motion.div>
+          <motion.div variants={listVariant}>
+            <Link
+              to="works"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={1000}
+              className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
+            >
+              Works
+            </Link>
+          </motion.div>
+          <motion.div variants={listVariant}>
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={1000}
+              className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
+            >
+              About
+            </Link>
+          </motion.div>
+          <motion.div variants={listVariant}>
+            <Link
+              to="people"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={1000}
+              className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
+            >
+              People
+            </Link>
+          </motion.div>
+          <motion.div variants={listVariant}>
+            <Link
+              to="news"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={1000}
+              className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
+            >
+              News
+            </Link>
+          </motion.div>
 
           <Link
             to="contact-us"
@@ -84,11 +134,14 @@ const Hero: FC = () => {
             offset={0}
             duration={1000}
           >
-            <button className="border bg-secondary text-white p-2 px-10 border-secondary rounded-full font-bold hover:bg-transparent hover:text-secondary transition-all duration-500">
+            <motion.button
+              className="border bg-secondary text-white p-2 px-10 border-secondary rounded-full font-bold hover:bg-transparent hover:text-secondary transition-all duration-500"
+              variants={listVariant}
+            >
               Contact Us
-            </button>
+            </motion.button>
           </Link>
-        </div>
+        </motion.div>
       )}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between p-2 lg:pt-16 lg:px-12 xl:px-36">
         {/* writing */}
