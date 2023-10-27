@@ -1,4 +1,5 @@
-import React, { FC } from "react";
+"use client";
+import React, { FC, useState } from "react";
 import Navbar from "./Navbar";
 import illustration from "@/public/assets/illustration.svg";
 import facebookIcon from "@/public/assets/facebook-icon.svg";
@@ -6,11 +7,89 @@ import twitterIcon from "@/public/assets/twitter-icon.svg";
 import igIcon from "@/public/assets/ig-icon.svg";
 import oval from "@/public/assets/Oval.svg";
 import Image from "next/image";
+import { Link } from "react-scroll";
 
 const Hero: FC = () => {
+  const [navOpen, setNavOpen] = useState<boolean>(false);
   return (
     <div className="bg-[linear-gradient(45deg,_#C86DD7_0%,_#3023AE_100%)] h-screen w-full mx-auto relative overflow-hidden">
-      <Navbar />
+      <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
+      {navOpen && (
+        <div className="lg:hidden flex flex-col gap-6 font-semibold text-secondary items-center w-full absolute bg-white rounded-b-2xl p-4 top-16 z-[100]">
+          <Link
+            to="homepage"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
+            className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
+          >
+            Home
+          </Link>
+          <Link
+            to="features"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
+            className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
+          >
+            Features
+          </Link>
+          <Link
+            to="works"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
+            className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
+          >
+            Works
+          </Link>
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
+            className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
+          >
+            About
+          </Link>
+          <Link
+            to="people"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
+            className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
+          >
+            People
+          </Link>
+          <Link
+            to="news"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
+            className="cursor-pointer hover:text-[#FFC300] transition-all duration-500"
+          >
+            News
+          </Link>
+
+          <Link
+            to="contact-us"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
+          >
+            <button className="border bg-secondary text-white p-2 px-10 border-secondary rounded-full font-bold hover:bg-transparent hover:text-secondary transition-all duration-500">
+              Contact Us
+            </button>
+          </Link>
+        </div>
+      )}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between p-2 lg:pt-16 lg:px-12 xl:px-36">
         {/* writing */}
         <div className="flex flex-col items-start p-2 gap-5 lg:gap-8">
