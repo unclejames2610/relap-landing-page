@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import aboutSwirl from "@/public/assets/aboutSwirl.svg";
 import image1 from "@/public/assets/aboutImage1.svg";
 import image2 from "@/public/assets/aboutImage2.svg";
@@ -10,7 +10,7 @@ import aboutOvalBR from "@/public/assets/aboutOvalBR.svg";
 import aboutOvalTop from "@/public/assets/aboutOvalTop.svg";
 import Image from "next/image";
 
-const About = () => {
+const About: FC = () => {
   return (
     <div
       className="flex items-center flex-col lg:flex-row justify-center lg:gap-24 bg-primary p-4 py-12 lg:pt-16 lg:p-12 xl:p-36 h-full w-full relative overflow-hidden"

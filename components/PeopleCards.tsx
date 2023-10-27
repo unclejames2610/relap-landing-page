@@ -1,9 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import image1 from "@/public/assets/peopleImage1.svg";
 import image2 from "@/public/assets/peopleImage2.svg";
 import image3 from "@/public/assets/peopleImage3.svg";
 import Image from "next/image";
-const PeopleCards = () => {
+
+const PeopleCards: FC = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
       <div className="flex flex-col p-4 shadow-lg bg-white gap-6 w-[250px] sm:w-[370px] lg:w-[300px]">

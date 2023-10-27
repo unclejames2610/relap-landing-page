@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import Navbar from "./Navbar";
 import illustration from "@/public/assets/illustration.svg";
 import facebookIcon from "@/public/assets/facebook-icon.svg";
@@ -7,7 +7,7 @@ import igIcon from "@/public/assets/ig-icon.svg";
 import oval from "@/public/assets/Oval.svg";
 import Image from "next/image";
 
-const Hero = () => {
+const Hero: FC = () => {
   return (
     <div className="bg-[linear-gradient(45deg,_#C86DD7_0%,_#3023AE_100%)] h-screen w-full mx-auto relative overflow-hidden">
       <Navbar />

@@ -1,8 +1,5 @@
 import Image from "next/image";
-import React from "react";
-import image1 from "@/public/assets/peopleImage1.svg";
-import image2 from "@/public/assets/peopleImage2.svg";
-import image3 from "@/public/assets/peopleImage3.svg";
+import React, { FC } from "react";
 import icon1 from "@/public/assets/peopleIcon1.svg";
 import icon2 from "@/public/assets/peopleIcon2.svg";
 import icon3 from "@/public/assets/peopleIcon3.svg";
@@ -11,7 +8,7 @@ import icon5 from "@/public/assets/peopleIcon5.svg";
 import icon6 from "@/public/assets/peopleIcon6.svg";
 import PeopleCards from "./PeopleCards";
 
-const People = () => {
+const People: FC = () => {
   return (
     <div
       className="flex flex-col p-4 py-12 lg:pt-16 lg:p-12 xl:p-36 h-full w-full gap-8 lg:gap-16"

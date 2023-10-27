@@ -1,9 +1,9 @@
 import Image from "next/image";
-import React from "react";
+import React, { FC } from "react";
 import image1 from "@/public/assets/newsImage.svg";
 import image2 from "@/public/assets/newsImage2.svg";
 
-const News = () => {
+const News: FC = () => {
   return (
     <div
       className="flex flex-col lg:flex-row justify-between p-4 py-12 lg:pt-16 lg:p-12 xl:p-36 h-full w-full gap-8 lg:gap-16 bg-customPink lg:items-center"

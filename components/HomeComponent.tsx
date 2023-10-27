@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { IoChevronUpSharp } from "react-icons/io5";
 import { IoChevronDownSharp } from "react-icons/io5";
 import homeImage from "@/public/assets/homeImage.svg";
@@ -7,7 +7,7 @@ import homeImage2 from "@/public/assets/homeimage.svg";
 import Image from "next/image";
 import { RxTriangleRight } from "react-icons/rx";
 
-const HomeComponent = () => {
+const HomeComponent: FC = () => {
   const [p1, setp1] = useState(false);
   const [p2, setp2] = useState(false);
   const [p3, setp3] = useState(false);

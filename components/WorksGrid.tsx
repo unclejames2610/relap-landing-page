@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import image1 from "@/public/assets/worksImage1.svg";
 import image2 from "@/public/assets/worksImage2.svg";
 import image3 from "@/public/assets/worksImage3.svg";
@@ -7,7 +7,7 @@ import image5 from "@/public/assets/worksImage5.svg";
 import image6 from "@/public/assets/worksImage6.svg";
 import Image from "next/image";
 
-const WorksGrid = () => {
+const WorksGrid: FC = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div className="flex flex-col items-center p-4 py-12 cursor-pointer hover:shadow-xl">

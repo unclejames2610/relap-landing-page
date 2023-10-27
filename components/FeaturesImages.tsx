@@ -1,23 +1,23 @@
 "use client";
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import image1 from "@/public/assets/featuresImage1.svg";
 import image2 from "@/public/assets/featuresImage2.svg";
 import image3 from "@/public/assets/featuresImage3.svg";
 import Image from "next/image";
 
-const FeaturesImages = () => {
-  const [isHovered1, setHovered1] = useState(false);
+const FeaturesImages: FC = () => {
+  const [isHovered1, setHovered1] = useState<boolean>(false);
 
   const handleHover1 = () => {
     setHovered1(!isHovered1);
   };
-  const [isHovered2, setHovered2] = useState(false);
+  const [isHovered2, setHovered2] = useState<boolean>(false);
 
   const handleHover2 = () => {
     setHovered2(!isHovered2);
   };
 
-  const [isHovered3, setHovered3] = useState(false);
+  const [isHovered3, setHovered3] = useState<boolean>(false);
 
   const handleHover3 = () => {
     setHovered3(!isHovered3);

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import Footer from "./Footer";
 
-const ContactUs = () => {
+const ContactUs: FC = () => {
   return (
     <div
       className="flex items-center p-4 py-12 lg:pt-16 lg:px-12 xl:px-36 h-full w-full gap-8 lg:gap-16 flex-col bg-contact_bg bg-cover bg-no-repeat bg-bottom"

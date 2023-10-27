@@ -1,9 +1,9 @@
 "use client";
-import React from "react";
+import React, { FC } from "react";
 
 import FeaturesImages from "./FeaturesImages";
 
-const Features = () => {
+const Features: FC = () => {
   return (
     <div
       className="flex flex-col p-4 py-12 lg:pt-16 lg:p-12 xl:p-36 h-full w-full bg-customPink gap-10"

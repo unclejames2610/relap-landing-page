@@ -1,10 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import image1 from "@/public/assets/footerImage1.svg";
 import image2 from "@/public/assets/footerImage2.svg";
 import image3 from "@/public/assets/footerImage3.svg";
 import Image from "next/image";
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <div className="flex lg:flex-row flex-col justify-between gap-8 w-full lg:items-end  ">
       <ul className="flex flex-col text-fontBlack gap-4">

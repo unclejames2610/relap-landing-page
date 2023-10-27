@@ -1,7 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import WorksGrid from "./WorksGrid";
 
-const Works = () => {
+const Works: FC = () => {
   return (
     <div
       className="flex items-center flex-col p-4 py-12 lg:pt-16 lg:p-12 xl:p-36 h-full w-full gap-8 lg:gap-16"
