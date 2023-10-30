@@ -8,7 +8,7 @@ import igIcon from "@/public/assets/ig-icon.svg";
 import oval from "@/public/assets/Oval.svg";
 import Image from "next/image";
 import { Link } from "react-scroll";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import FadeIn from "./FadeIn";
 
 interface ListItemsProps {
@@ -26,7 +26,7 @@ const Hero: FC = () => {
     { id: 3, name: "Works", url: "works" },
     { id: 4, name: "About", url: "about" },
     { id: 5, name: "People", url: "people" },
-    { id: 2, name: "News", url: "news" },
+    { id: 6, name: "News", url: "news" },
   ];
 
   const menuVariant = {
@@ -34,8 +34,12 @@ const Hero: FC = () => {
       x: 100,
       y: -100,
       opacity: 0,
+      borderBottomLeftRadius: ["10%", "20%", "50%", "70%", "100%"],
       transition: {
         when: "afterChildren",
+        duration: 0.5,
+        staggerChildren: 0.1,
+        staggerDirection: -1,
       },
     },
     visible: {
@@ -68,31 +72,33 @@ const Hero: FC = () => {
   return (
     <div className="bg-[linear-gradient(45deg,_#C86DD7_0%,_#3023AE_100%)] h-screen w-full mx-auto relative overflow-hidden">
       <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
-      {navOpen && (
-        <motion.div
-          className="lg:hidden font-semibold text-secondary text-center w-full absolute bg-white p-4 top-16 z-[100]"
-          variants={menuVariant}
-          animate="visible"
-          initial="hidden"
-        >
-          {listItems.map((list) => (
-            <motion.li
-              key={list.id}
-              variants={listVariant}
-              className="cursor-pointer hover:text-[#FFC300] transition-all duration-500 pb-4 list-none"
-            >
-              <Link
-                to={list.url}
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={1000}
+      <AnimatePresence>
+        {navOpen && (
+          <motion.div
+            className="lg:hidden flex flex-col gap-6 font-semibold text-secondary items-center w-full absolute bg-white p-4 top-16 z-[100]"
+            variants={menuVariant}
+            animate="visible"
+            initial="hidden"
+            exit="hidden"
+          >
+            {listItems.map((list) => (
+              <motion.li
+                key={list.id}
+                variants={listVariant}
+                className="cursor-pointer hover:text-[#FFC300] transition-all duration-500 list-none"
               >
-                {list.name}
-              </Link>
-            </motion.li>
-          ))}
-          {/* <motion.div variants={listVariant}>
+                <Link
+                  to={list.url}
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={1000}
+                >
+                  {list.name}
+                </Link>
+              </motion.li>
+            ))}
+            {/* <motion.div variants={listVariant}>
             <Link
               to="homepage"
               spy={true}
@@ -165,22 +171,23 @@ const Hero: FC = () => {
             </Link>
           </motion.div> */}
 
-          <motion.button
-            className="border bg-secondary text-white p-2 px-10 border-secondary rounded-full font-bold hover:bg-transparent hover:text-secondary transition-all duration-500"
-            variants={listVariant}
-          >
-            <Link
-              to="contact-us"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={1000}
+            <motion.button
+              className="border bg-secondary text-white p-2 px-10 border-secondary rounded-full font-bold hover:bg-transparent hover:text-secondary transition-all duration-500"
+              variants={listVariant}
             >
-              Contact Us
-            </Link>
-          </motion.button>
-        </motion.div>
-      )}
+              <Link
+                to="contact-us"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={1000}
+              >
+                Contact Us
+              </Link>
+            </motion.button>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="flex flex-col lg:flex-row lg:items-center justify-between p-2 lg:pt-16 lg:px-12 xl:px-36">
         {/* writing */}
         <div className="flex flex-col items-start p-2 gap-5 lg:gap-8">

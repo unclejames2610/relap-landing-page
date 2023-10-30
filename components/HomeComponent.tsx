@@ -7,7 +7,7 @@ import homeImage2 from "@/public/assets/homeimage.svg";
 import Image from "next/image";
 import { RxTriangleRight } from "react-icons/rx";
 import FadeIn from "./FadeIn";
-import { motion, Variants } from "framer-motion";
+import { motion, Variants, AnimatePresence } from "framer-motion";
 
 const HomeComponent: FC = () => {
   const [p1, setp1] = useState(false);
@@ -70,19 +70,22 @@ const HomeComponent: FC = () => {
                 <IoChevronDownSharp className="text-fontBlack text-lg" />
               )}
             </motion.div>
-
-            {p1 && (
-              <motion.p
-                className="text-fontBlack/50 sm:w-[470px] text-justify"
-                variants={pVariants}
-                initial="hidden"
-                animate="visible"
-              >
-                Nam libero tempore, cum soluta nobis est eligendi optio cumque
-                nihil impedit quo minus id quod maxime placeat facere possimus,
-                omnis voluptas assumenda est, omnis dolor repellendus.
-              </motion.p>
-            )}
+            <AnimatePresence>
+              {p1 && (
+                <motion.p
+                  className="text-fontBlack/50 sm:w-[470px] text-justify"
+                  variants={pVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                >
+                  Nam libero tempore, cum soluta nobis est eligendi optio cumque
+                  nihil impedit quo minus id quod maxime placeat facere
+                  possimus, omnis voluptas assumenda est, omnis dolor
+                  repellendus.
+                </motion.p>
+              )}
+            </AnimatePresence>
           </div>
         </FadeIn>
 
@@ -107,18 +110,22 @@ const HomeComponent: FC = () => {
               )}
             </motion.div>
 
-            {p2 && (
-              <motion.p
-                className="text-fontBlack/50 sm:w-[470px] text-justify"
-                variants={pVariants}
-                initial="hidden"
-                animate="visible"
-              >
-                Nam libero tempore, cum soluta nobis est eligendi optio cumque
-                nihil impedit quo minus id quod maxime placeat facere possimus,
-                omnis voluptas assumenda est, omnis dolor repellendus.
-              </motion.p>
-            )}
+            <AnimatePresence>
+              {p2 && (
+                <motion.p
+                  className="text-fontBlack/50 sm:w-[470px] text-justify"
+                  variants={pVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                >
+                  Nam libero tempore, cum soluta nobis est eligendi optio cumque
+                  nihil impedit quo minus id quod maxime placeat facere
+                  possimus, omnis voluptas assumenda est, omnis dolor
+                  repellendus.
+                </motion.p>
+              )}
+            </AnimatePresence>
           </div>
         </FadeIn>
 
@@ -144,19 +151,22 @@ const HomeComponent: FC = () => {
                 <IoChevronDownSharp className="text-fontBlack text-lg" />
               )}
             </motion.div>
-
-            {p3 && (
-              <motion.p
-                className="text-fontBlack/50 sm:w-[470px] text-justify"
-                variants={pVariants}
-                initial="hidden"
-                animate="visible"
-              >
-                Nam libero tempore, cum soluta nobis est eligendi optio cumque
-                nihil impedit quo minus id quod maxime placeat facere possimus,
-                omnis voluptas assumenda est, omnis dolor repellendus.
-              </motion.p>
-            )}
+            <AnimatePresence>
+              {p3 && (
+                <motion.p
+                  className="text-fontBlack/50 sm:w-[470px] text-justify"
+                  variants={pVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                >
+                  Nam libero tempore, cum soluta nobis est eligendi optio cumque
+                  nihil impedit quo minus id quod maxime placeat facere
+                  possimus, omnis voluptas assumenda est, omnis dolor
+                  repellendus.
+                </motion.p>
+              )}
+            </AnimatePresence>
           </div>
         </FadeIn>
       </div>
