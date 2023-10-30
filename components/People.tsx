@@ -7,6 +7,7 @@ import icon4 from "@/public/assets/peopleicon4.svg";
 import icon5 from "@/public/assets/peopleIcon5.svg";
 import icon6 from "@/public/assets/peopleIcon6.svg";
 import PeopleCards from "./PeopleCards";
+import FadeIn from "./FadeIn";
 
 const People: FC = () => {
   return (
@@ -16,14 +17,19 @@ const People: FC = () => {
     >
       {/* writing */}
       <div className="flex items-center flex-col gap-5">
-        <h2 className="font-bold font-poppins lg:text-[56px] lg:leading-[64px] text-fontBlack text-[40px] leading-[48px]">
-          Officis debitis
-        </h2>
-        <h5 className="font-semibold text-fontBlcak text-center md:w-[570px]">
-          Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
-          voluptatibus maiores alias consequatur aut perferendis doloribus
-          asperiores repella.
-        </h5>
+        <FadeIn delay={0.4} direction="down">
+          <h2 className="font-bold font-poppins lg:text-[56px] lg:leading-[64px] text-fontBlack text-[40px] leading-[48px]">
+            Officis debitis
+          </h2>
+        </FadeIn>
+
+        <FadeIn delay={0.2} direction="down">
+          <h5 className="font-semibold text-fontBlcak text-center md:w-[570px]">
+            Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+            reiciendis voluptatibus maiores alias consequatur aut perferendis
+            doloribus asperiores repella.
+          </h5>
+        </FadeIn>
       </div>
 
       {/* cards */}
@@ -32,14 +38,16 @@ const People: FC = () => {
       </div>
 
       {/* icons */}
-      <div className="flex flex-wrap justify-between items-center gap-8 mt-12 opacity-50">
-        <Image src={icon1} alt="icon 1" />
-        <Image src={icon2} alt="icon 2" />
-        <Image src={icon3} alt="icon 3" />
-        <Image src={icon4} alt="icon 4" />
-        <Image src={icon5} alt="icon 5" />
-        <Image src={icon6} alt="icon 6" />
-      </div>
+      <FadeIn delay={0.8} direction="up">
+        <div className="flex flex-wrap justify-between items-center gap-8 mt-12 opacity-50">
+          <Image src={icon1} alt="icon 1" />
+          <Image src={icon2} alt="icon 2" />
+          <Image src={icon3} alt="icon 3" />
+          <Image src={icon4} alt="icon 4" />
+          <Image src={icon5} alt="icon 5" />
+          <Image src={icon6} alt="icon 6" />
+        </div>
+      </FadeIn>
     </div>
   );
 };
