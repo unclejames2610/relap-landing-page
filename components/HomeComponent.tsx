@@ -64,11 +64,13 @@ const HomeComponent: FC = () => {
               }}
             >
               <p className="font-semibold text-fontBlack">Totam rem aperiam</p>
-              {p1 ? (
-                <IoChevronUpSharp className="text-fontBlack text-lg" />
-              ) : (
+              <motion.div
+                animate={{ rotate: p1 ? 180 : 0 }}
+                initial={{ rotate: 0 }}
+                transition={{ type: "spring", stiffness: 100 }}
+              >
                 <IoChevronDownSharp className="text-fontBlack text-lg" />
-              )}
+              </motion.div>
             </motion.div>
             <AnimatePresence>
               {p1 && (
@@ -103,11 +105,13 @@ const HomeComponent: FC = () => {
               }}
             >
               <p className="font-semibold text-fontBlack">Eaque ipsa quae</p>
-              {p2 ? (
-                <IoChevronUpSharp className="text-fontBlack text-lg" />
-              ) : (
+              <motion.div
+                animate={{ rotate: p2 ? 180 : 0 }}
+                initial={{ rotate: 0 }}
+                transition={{ type: "spring", stiffness: 100 }}
+              >
                 <IoChevronDownSharp className="text-fontBlack text-lg" />
-              )}
+              </motion.div>
             </motion.div>
 
             <AnimatePresence>
@@ -145,11 +149,13 @@ const HomeComponent: FC = () => {
               <p className="font-semibold text-fontBlack">
                 Inventore veritatis
               </p>
-              {p3 ? (
-                <IoChevronUpSharp className="text-fontBlack text-lg" />
-              ) : (
+              <motion.div
+                animate={{ rotate: p3 ? 180 : 0 }}
+                initial={{ rotate: 0 }}
+                transition={{ type: "spring", stiffness: 100 }}
+              >
                 <IoChevronDownSharp className="text-fontBlack text-lg" />
-              )}
+              </motion.div>
             </motion.div>
             <AnimatePresence>
               {p3 && (
